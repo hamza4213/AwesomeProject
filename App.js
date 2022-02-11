@@ -1,20 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StatusBar } from "expo-status-bar";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  ScrollView,
+  Image,
+} from "react-native";
+import Button from "./Components/Button";
 export default function App() {
+  const Data = ["Hamza", "Ali", "Fahad", "Azhar"];
+  const renderItem = ({ item }) => {
+    console.log(item);
+    return <Button text={item} />;
+  };
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    // <View style={styles.abc}>
+    <Image source={require("./Images/img.jpg")} />
+    // </View>
   );
 }
-
 const styles = StyleSheet.create({
-  container: {
+  abc: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
