@@ -12,6 +12,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Screen1 from "./Screens/Screen1";
 import Screen2 from "./Screens/Screen2";
+import Products from "./Screens/Products";
+import CartScreen from "./Screens/CartScreen";
 export default function App() {
   const Data = ["Hamza", "Ali", "Fahad", "Azhar"];
   const renderItem = ({ item }) => {
@@ -22,6 +24,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+        <Stack.Screen name="Products" component={Products} />
+        <Stack.Screen name="CartScreen" component={CartScreen} />
         <Stack.Screen name="Screen1" component={Screen1} />
         <Stack.Screen name="Screen2" component={Screen2} />
       </Stack.Navigator>
