@@ -53,7 +53,7 @@ const Products = ({ navigation }) => {
         renderItem={({ item }) => {
           // console.log(item);
           let disabled = cart.find(({ price }) => price === item.price);
-          console.log(disabled);
+          // console.log(disabled);
           return (
             <View style={styles.view}>
               <Image style={styles.image} source={{ uri: item.image }} />
